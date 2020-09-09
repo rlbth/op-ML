@@ -8,7 +8,7 @@ docker build -t udacity-op-ml:latest
 
 # Step 2: 
 # List docker images
-docker image ls
+docker image 
 
 # Step 3: 
 # Run flask app
