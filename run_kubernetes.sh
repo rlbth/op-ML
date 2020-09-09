@@ -5,19 +5,18 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath="clairelee7522/mlapi"
+dockerpath="rlbth/udacity-op-ml:latest"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run mlmicroserviceapi\
-    --generator=run-pod/v1\
-    --image=$dockerpath\
-    --port=80 --labels app=mlmicroserviceapi
+kubectl create deployment udacity-op-ml --image=$dockerpath
+
 
 # Step 3:
 # List kubernetes pods
-kubectl get pods
+kubectl get pods --all-namespaces
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward mlmicroserviceapi 8000:80
+kubectl expose deployment udacity-op-ml --type="NodePort" --port=80
+kubectl port-forward deployment/udacity-op-ml 8000:80
