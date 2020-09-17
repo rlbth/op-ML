@@ -5,11 +5,11 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath="rlbth/udacity-op-ml:latest"
+dockerpath="docker.io/lakran21/lakran:latest"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl create deployment udacity-op-ml --image=$dockerpath
+kubectl create deployment lakran21/lakran --image=$dockerpath
 
 
 # Step 3:
@@ -18,5 +18,5 @@ kubectl get pods --all-namespaces
 
 # Step 4:
 # Forward the container port to a host
-kubectl expose deployment udacity-op-ml --type="NodePort" --port=80
-kubectl port-forward deployment/udacity-op-ml 8000:80
+kubectl expose deployment lakran21/lakran --type="NodePort" --port=80
+kubectl port-forward deployment/lakran21/lakran 8000:80
