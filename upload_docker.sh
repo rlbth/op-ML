@@ -6,14 +6,14 @@
 # Create dockerpath
 # dockerpath=<your docker ID/path>
 
-dockerpath="rlbth/udacity-op-ml:lastest"
+dockerpath="docker.io/lakran21/lakran:lastest"
 
 # Step 2:  
 # Authenticate & tag
-docker login --username=rlbth
+docker login --username=lakran21
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
-docker tag udacity-op-ml:lastest $dockerpath
+docker tag lakran21/lakran:lastest $dockerpath
 docker push $dockerpath
