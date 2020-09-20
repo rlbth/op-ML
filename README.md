@@ -2,7 +2,7 @@
 
 
 Aim of the project:
-The project goal is to operationalize this working, machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications. Following are the project steps:
+The undertaking objective is to operationalize the working of an AI microservice by utilizing kubernetes, which is an open-source framework for automating the administration of containerized application. Following are the project steps:
 
 1.Test  project code using linting
 2.Using Dockerfile to containerize this application
