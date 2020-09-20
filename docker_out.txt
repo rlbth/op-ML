@@ -1,0 +1,82 @@
+
+(.bhargavi) root@ip-172-31-2-92:/home/ubuntu/op-ML# ./run_docker.sh
+Sending build context to Docker daemon  438.9MB
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 09e68ff682b4
+Step 3/6 : COPY . app.py /app/
+ ---> 0ec31782cf75
+Step 4/6 : RUN pip install --upgrade pip &&    pip install -r requirements.txt
+ ---> Running in 466961a437a8
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/4e/5f/528232275f6509b1fff703c9280e58951a81abe24640905de621c       9f81839/pip-20.2.3-py2.py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+  Found existing installation: pip 19.1.1
+    Uninstalling pip-19.1.1:
+      Successfully uninstalled pip-19.1.1
+Successfully installed pip-20.2.3
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+  Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (27 kB)
+Collecting numpy==1.17.2
+  Downloading numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+Collecting pandas==0.24.2
+  Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+Collecting python-dateutil==2.8.0
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Collecting pytz==2019.3
+  Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Collecting scikit-learn==0.20.2
+  Downloading scikit_learn-0.20.2-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+Collecting scipy==1.3.1
+  Downloading scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+Collecting six==1.12.0
+  Downloading six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting Werkzeug==0.16.0
+  Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+Collecting pylint==2.4.4
+  Downloading pylint-2.4.4-py3-none-any.whl (302 kB)
+Collecting astroid==2.3.0
+  Downloading astroid-2.3.0-py3-none-any.whl (191 kB)
+Collecting isort<5,>=4.2.5
+  Downloading isort-4.3.21-py2.py3-none-any.whl (42 kB)
+Collecting mccabe<0.7,>=0.6
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting lazy-object-proxy
+  Downloading lazy_object_proxy-1.5.1-cp37-cp37m-manylinux1_x86_64.whl (51 kB)
+Collecting wrapt
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Collecting typed-ast>=1.3.0; implementation_name == "cpython" and python_version >= "3.7" and python_version < "3       .8"
+  Downloading typed_ast-1.4.1-cp37-cp37m-manylinux1_x86_64.whl (737 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp37-cp37m-linux_x86_64.whl size=71568 sha256=c9685cef406164b3bb       aefb8e0ff2d23cf209df15072481665725f4aea578347e
+  Stored in directory: /root/.cache/pip/wheels/62/76/4c/aa25851149f3f6d9785f6c869387ad82b3fd37582fa8147ac6
+Successfully built wrapt
+Installing collected packages: Click, Werkzeug, MarkupSafe, Jinja2, itsdangerous, Flask, numpy, six, python-dateu       til, pytz, pandas, scipy, scikit-learn, lazy-object-proxy, wrapt, typed-ast, astroid, isort, mccabe, pylint
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 astroid-2.3.0 isort-4       .3.21 itsdangerous-1.1.0 lazy-object-proxy-1.5.1 mccabe-0.6.1 numpy-1.17.2 pandas-0.24.2 pylint-2.4.4 python-date       util-2.8.0 pytz-2019.3 scikit-learn-0.20.2 scipy-1.3.1 six-1.12.0 typed-ast-1.4.1 wrapt-1.12.1
+Removing intermediate container 466961a437a8
+ ---> dbe7825210d4
+Step 5/6 : EXPOSE 80
+ ---> Running in efc529143c0f
+Removing intermediate container efc529143c0f
+ ---> ca17f70cbdaa
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in f2c313581d0c
+Removing intermediate container f2c313581d0c
+ ---> c90417fcc0bf
+Successfully built c90417fcc0bf
+Successfully tagged lakran21/lakran:latest
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+6f31b59d2d02d8ccb185e894a4c75b6d9cb4a5ed7c111cd42b5a2e2dbbc40f91
+

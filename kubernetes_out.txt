@@ -1,0 +1,15 @@
+ubuntu@ip-172-31-2-92:~/op-ML$ ./run_kubernetes.sh
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
+default       lakran                             1/1     Running   0          2m3s
+kube-system   coredns-f9fd979d6-wnqvj            1/1     Running   0          8m47s
+kube-system   etcd-minikube                      1/1     Running   0          8m43s
+kube-system   kube-apiserver-minikube            1/1     Running   0          8m43s
+kube-system   kube-controller-manager-minikube   1/1     Running   0          8m43s
+kube-system   kube-proxy-s24p4                   1/1     Running   0          8m47s
+kube-system   kube-scheduler-minikube            1/1     Running   0          8m43s
+kube-system   storage-provisioner                1/1     Running   0          8m52s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+
