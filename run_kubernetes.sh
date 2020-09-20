@@ -18,5 +18,5 @@ kubectl get pods --all-namespaces
 
 # Step 4:
 # Forward the container port to a host
-kubectl expose deployment lakran --type="NodePort" --port=80
+#kubectl expose deployment lakran --type="NodePort" --port=80
 kubectl port-forward lakran 8000:80
