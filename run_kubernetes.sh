@@ -9,7 +9,7 @@ dockerpath="lakran21/lakran"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run lakran21/lakran --image=$dockerpath --port=80 --labels app=lakran
+kubectl run lakran --image=$dockerpath --port=80 --labels app=lakran
 
 
 # Step 3:
