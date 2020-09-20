@@ -1,33 +1,32 @@
-[![RLBTH](https://circleci.com/gh/rlbth/op-ML.svg?style=svg)]
+![RLBTH](https://circleci.com/gh/rlbth/op-ML.svg?style=svg)
 
-Project Overview
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API.
 
-You are given a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on the data source site. This project tests your ability to operationalize a Python flask app—in a provided file, app.py—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+Aim of the project:
+The undertaking objective is to operationalize the working of an AI microservice by utilizing kubernetes, which is an open-source framework for automating the administration of containerized application. Following are the project steps:
 
-Project Tasks
-Your project goal is to operationalize this working, machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications. In this project you will:
+1.Test  project code using linting
+2.Using Dockerfile to containerize this application
+3.Deploying  containerized application using Docker and make a prediction
+4.Improve the log statements in the source code for this application
+5.Configuring Kubernetes and creating a Kubernetes cluster
+5.Deploy a container using Kubernetes and making a prediction
 
-Test your project code using linting
-Complete a Dockerfile to containerize this application
-Deploy your containerized application using Docker and make a prediction
-Improve the log statements in the source code for this application
-Configure Kubernetes and create a Kubernetes cluster
-Deploy a container using Kubernetes and make a prediction
-Upload a complete Github repo with CircleCI to indicate that your code has been tested
-You can find a detailed project rubric, here.
+Instructions:
 
-The final implementation of the project will showcase your abilities to operationalize production microservices.
+Setting up virtualenv:
+python3 -m venv .devops
+. .devops/bin/activate
 
-Setup the Environment
-Create a virtualenv and activate it
-Run make install to install the necessary dependencies
-Running app.py
-Standalone: python app.py
-Run in Docker: ./run_docker.sh
-Run in Kubernetes: ./run_kubernetes.sh
-Kubernetes Steps
-Setup and Configure Docker locally
-Setup and Configure Kubernetes locally
-Create Flask app in Container
-Run via kubectl
+Installing dependencies:
+pip install -r requirements.txt
+
+Running app.py:
+python app.py
+
+Running with docker:
+./run_docker.sh
+
+Running with kubernetes:
+./run_kubernetes.sh
+
+
