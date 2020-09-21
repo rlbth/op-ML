@@ -7,4 +7,4 @@
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
 [2020-09-21 02:35:18,703] INFO in app: Prediction returned by the model is : [20.35373177134412]1
-172.17.0.1 - - [21/Sept/2020 02:35:18] "POST /predict HTTP/1.1" 200 -
+172-31-2-92 - - [21/Sept/2020 02:35:18] "POST /predict HTTP/1.1" 200 -
